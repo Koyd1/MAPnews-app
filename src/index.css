@@ -1,0 +1,13 @@
+/*Reset CSS styles*/
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Inter, sans-serif;
+}
+.container {
+  max-height: 100vh;
+  padding: 24px;
+}
