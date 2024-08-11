@@ -1,6 +1,6 @@
 .banner{
     display: flex;
-    width: 50%;
+    width: 100%;
     flex-direction: column;
     gap: 12px;
 }
