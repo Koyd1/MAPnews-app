@@ -1,11 +1,12 @@
-.wrapper{
+.wrapper {
     width: 100%;
     height: auto;
     position: relative;
     padding-top: 80%;
     background-color: #f2f4f5;
 }
-.image{
+
+.image {
     position: absolute;
     top: 0;
     left: 0;
@@ -13,4 +14,3 @@
     height: 100%;
     object-fit: cover;
 }
-
