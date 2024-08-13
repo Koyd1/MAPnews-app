@@ -1,8 +1,7 @@
 import {useEffect, useState} from "react";
 import styles from "./styles.module.css";
-import {NewsBanner, NewsList} from "../../components/";
+import {NewsBanner, NewsList, Skeleton} from "../../components/";
 import {getNews} from "../../api/apiNews.js";
-import {Skeleton} from "../../components/Skeleton/Skeleton.jsx";
 
 export const Main = () => {
     const [news, setNews] = useState([]);
