@@ -4,4 +4,5 @@ export * from './Image/Image.jsx';
 export * from './NewsList/NewsList.jsx';
 export * from './NewsItem/NewsItem.jsx';
 export * from './Skeleton/Skeleton.jsx';
+export * from './Pagination/Pagination.jsx';
 
