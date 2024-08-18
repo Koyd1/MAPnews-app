@@ -6,7 +6,7 @@ const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 export const getNews = async ({
   page_number = 1,
   page_size = 10,
-  category = "",
+  category,
   keywords,
 }) => {
   try {
@@ -21,7 +21,7 @@ export const getNews = async ({
     });
     return response.data;
   } catch (error) {
-    console.log(`Error on fetching: ${error}`);
+    console.log(error);
   }
 };
 
@@ -34,6 +34,6 @@ export const getCategories = async () => {
     });
     return response.data;
   } catch (error) {
-    console.log(`Error on fetching: ${error}`);
+    console.log(error);
   }
 };

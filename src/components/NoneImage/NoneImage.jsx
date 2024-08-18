@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 
-export const NoneImage = () => {
+const NoneImage = () => {
   return (
     <div className={styles.wrappers}>
       <img
@@ -11,3 +11,5 @@ export const NoneImage = () => {
     </div>
   );
 };
+
+export default NoneImage;

@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 
-export const Search = ({ keywords, setKeywords }) => {
+const Search = ({ keywords, setKeywords }) => {
   return (
     <div className={styles.search}>
       <input
@@ -13,3 +13,5 @@ export const Search = ({ keywords, setKeywords }) => {
     </div>
   );
 };
+
+export default Search;
