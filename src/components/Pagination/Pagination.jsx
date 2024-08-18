@@ -1,25 +1,45 @@
 import styles from "./styles.module.css";
 
-export const Pagination = ({totalPages, handleNumPage, handlePrevPage, curentPage, handleNextPage}) => {
-    return (
-        <div>
-            <div className={styles.list}>
-                <button onClick={handlePrevPage}
-                        className={styles.arrow}
-                        disabled={curentPage === 1}
-                >{'<'}</button>
+const Pagination = ({
+  totalPages,
+  handlePreviousPage,
+  handleNextPage,
+  handlePageClick,
+  currentPage,
+}) => {
+  return (
+    <div className={styles.pagination}>
+      <button
+        disabled={currentPage <= 1}
+        onClick={handlePreviousPage}
+        className={styles.arrow}
+      >
+        {"<"}
+      </button>
+      <div className={styles.list}>
+        {[...Array(totalPages)].map((_, index) => {
+          return (
+            <button
+              onClick={() => handlePageClick(index + 1)}
+              className={styles.pageNumber}
+              disabled={index + 1 === currentPage}
+              key={index}
+            >
+              {index + 1}
+            </button>
+          );
+        })}
+      </div>
 
-                {[...Array(totalPages)].map((_, index) => {
-                    return <button onClick={() => handleNumPage(index+1)}
-                                   key={index} className={styles.pageNumber}
-                                   disabled={curentPage === index + 1}>
-                        {index+1} </button>
-                })}
-                <button onClick={handleNextPage}
-                        className={styles.arrow}
-                        disabled={curentPage === totalPages}
-                >{'>'}</button>
-            </div>
-        </div>
-    )
-}
+      <button
+        disabled={currentPage >= totalPages}
+        onClick={handleNextPage}
+        className={styles.arrow}
+      >
+        {">"}
+      </button>
+    </div>
+  );
+};
+
+export default Pagination;
