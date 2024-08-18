@@ -7,3 +7,4 @@ export * from "./Skeleton/Skeleton.jsx";
 export * from "./Pagination/Pagination.jsx";
 export * from "./Categoties/Categories.jsx";
 export * from "./NoneImage/NoneImage.jsx";
+export * from "./Search/Search.jsx";
