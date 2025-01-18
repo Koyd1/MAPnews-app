@@ -1,12 +1,12 @@
+import { getNews } from "../../api/apiNews";
 import { PAGE_SIZE, TOTAL_PAGES } from "../../constants/constants";
+import { useDebounce } from "../../helpers/hooks/useDebounce";
+import { useFetch } from "../../helpers/hooks/useFetch";
+import { useFilters } from "../../helpers/hooks/useFilters";
 import NewsFilters from "../NewsFilters/NewsFilters";
 import NewsList from "../NewsList/NewsList";
+import PaginationWrapper from "../PaginationWrapper/PaginationWrapper";
 import styles from "./styles.module.css";
-import { useFilters } from "../../helpers/hooks/useFilters.js";
-import { useDebounce } from "../../helpers/hooks/useDebounce.js";
-import { useFetch } from "../../helpers/hooks/useFetch.js";
-import { getNews } from "../../api/apiNews.js";
-import PaginationWrapper from "../PaginationWrapper/PaginationWrapper.jsx";
 
 const NewsByFilters = () => {
   const { filters, changeFilter } = useFilters({
@@ -42,6 +42,7 @@ const NewsByFilters = () => {
   return (
     <section className={styles.section}>
       <NewsFilters changeFilter={changeFilter} filters={filters} />
+
       <PaginationWrapper
         top
         bottom
